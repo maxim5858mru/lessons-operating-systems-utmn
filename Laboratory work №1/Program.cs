@@ -11,11 +11,11 @@ namespace LW1
             {
                 if (args.Length <= 0)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Для работы программы требуется хотя бы один аргумент.", "args");
                 }
                 else if (!CheckFileName(ref args[0]))
                 {
-                    throw new FileNotFoundException();
+                    throw new FileNotFoundException("Указанный файл не существует.", args[0]);
                 }
                 else
                 {
@@ -31,14 +31,14 @@ namespace LW1
             catch (ArgumentException exception)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.Error.WriteLine("Для работы программы требуется хотя бы один аргумент.");
+                Console.Error.WriteLine(exception.Message);
                 Console.Error.WriteLine("Стек вызовов:\n\r" + exception.StackTrace);
                 Environment.Exit(0xA0);
             }
             catch (FileNotFoundException exception)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.Error.WriteLine("Указанный файл не существует");
+                Console.Error.WriteLine(exception.Message);
                 Console.Error.WriteLine("Стек вызовов:\n\r" + exception.StackTrace);
                 Environment.Exit(0x50);
             }
@@ -53,7 +53,7 @@ namespace LW1
             }
             else if (File.Exists(fileName + ".vbs"))
             {
-                fileName = fileName + ".vbs";
+                fileName += ".vbs";
                 return true;
             }
             else
