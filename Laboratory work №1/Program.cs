@@ -77,7 +77,9 @@ namespace LW1
 
             Console.WriteLine($"Запуск интерпретатора VBScript. Количество аргументов: {arguments.Length}");
             process.Start();
+            Console.ForegroundColor = ConsoleColor.Blue;
             process.WaitForExit();
+            Console.ResetColor();
             Console.WriteLine("Процесс успешно был запущен и завершился через " +
                 $"{process.ExitTime - process.StartTime}, c кодом возврата {process.ExitCode}.");
         }

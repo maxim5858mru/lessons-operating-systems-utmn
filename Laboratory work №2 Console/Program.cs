@@ -19,7 +19,6 @@ namespace LW2_Console
                     // Получение значений переменных с консоли
                     try
                     {
-                        Console.Clear();
                         Console.WriteLine(@"Доступные функции:
     1. Sin(x)
     2. Cos(x),
@@ -52,6 +51,8 @@ namespace LW2_Console
                         Console.Error.Write("\n\rОшибка при преобразовании введённой строки в числовое значение.");
                         Console.ReadKey();
                         Console.ResetColor();
+
+                        Console.WriteLine("\n\r\n\r" + new string('#', 80));
                     }
                     catch (ArgumentException exception)
                     {
@@ -59,6 +60,8 @@ namespace LW2_Console
                         Console.Error.Write("\n\r" + exception.Message);
                         Console.ReadKey();
                         Console.ResetColor();
+                        
+                        Console.WriteLine("\n\r\n\r" + new string('#', 80));
                     }
                 } while (true);
 
@@ -154,16 +157,16 @@ namespace LW2_Console
             }
 
             // Заголовок таблицы
-            Console.WriteLine(new string('-', 26));
-            Console.WriteLine("|\t  x |\t    f(x) |");
-            Console.WriteLine(new string('-', 26));
+            Console.WriteLine(new string('-', 34));
+            Console.WriteLine("|\t      x |\t    f(x) |");
+            Console.WriteLine(new string('-', 34));
 
             // Расчёт данных и вывод
             for (double i = from; i <= to; i += step)
             {
-                Console.WriteLine(string.Format("|\t{0:000} |\t{2}{1:000.000} |", i, calc(i), (calc(i) < 0) ? "" : " "));
+                Console.WriteLine(string.Format("|\t{0:000.000} |\t{2}{1:000.000} |", i, calc(i), (calc(i) < 0) ? "" : " "));
             }
-            Console.WriteLine(new string('-', 26));
+            Console.WriteLine(new string('-', 34));
         }
     }
 }

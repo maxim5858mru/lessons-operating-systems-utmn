@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Laboratory work №2 Console": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}

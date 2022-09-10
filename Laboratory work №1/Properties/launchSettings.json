@@ -1,9 +1,13 @@
 {
   "profiles": {
-    "Laboratory work 1": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "Laboratory work №1": {
       "commandName": "Project",
       "commandLineArgs": "Example.vbs Hello World",
-      "workingDirectory": "C:\\Users\\maxim\\Documents\\Проекты\\UTMN\\Lessons Operating Systems UTMN\\Laboratory work 1"
+      "workingDirectory": "C:\\Users\\maxim\\Documents\\Проекты\\UTMN\\Lessons Operating Systems UTMN\\Laboratory work №1"
     }
   }
 }
