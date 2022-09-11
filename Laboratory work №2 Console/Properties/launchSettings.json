@@ -1,7 +1,13 @@
 {
   "profiles": {
     "Laboratory work №2 Console": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "environmentVariables": {
+        "LW_OS_FROM": "0",
+        "LW_OS_TO": "1,5",
+        "LW_OS_STEP": "0,2",
+        "LW_OS_FUNC": "1"
+      }
     },
     "WSL": {
       "commandName": "WSL2",

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Collections;
 
 namespace LW2_Console
 {
@@ -11,7 +13,60 @@ namespace LW2_Console
             double from, to, step;
             int function;
 
-            if (args.Length == 0)
+            // Проверка и получение переменных окружения
+            var envVars = Environment.GetEnvironmentVariables();
+            if (envVars.Contains("LW_OS_FROM") &&
+                envVars.Contains("LW_OS_TO") &&
+                envVars.Contains("LW_OS_STEP") &&
+                envVars.Contains("LW_OS_FUNC") &&
+                args.Length < 4)
+            {
+                args = new string[]
+                {
+                    envVars["LW_OS_FUNC"].ToString(),
+                    envVars["LW_OS_FROM"].ToString(),
+                    envVars["LW_OS_TO"].ToString(),
+                    envVars["LW_OS_STEP"].ToString()
+                };
+            }
+
+            if (args.Length == 4)
+            {
+                // Проверка переданных аргументов программе, через консольную строку
+                try
+                {
+                    function = int.Parse(args[0]);
+                    if (function == 0) Environment.Exit(0x00);
+                    else if (function < 0 || function > 6) throw new ArgumentException("Ошибка при выборе функции.", "function");
+
+                    from = double.Parse(args[1]);
+
+                    to = double.Parse(args[2]);
+                    if (to < from) throw new ArgumentException("Конец диапазона меньше его начала.", "to");
+
+                    step = double.Parse(args[3]);
+                    if (step < 0) throw new ArgumentException("Указан шаг меньше нуля.", "step");
+                }
+                catch (FormatException exception)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Error.WriteLine("\n\rОшибка при преобразовании аргумента в числовое значение.");
+                    Console.Error.WriteLine("Стек вызовов:\n\r" + exception.StackTrace);
+                    Environment.Exit(0xA0);                                     // TODO: Нужен код ошибки
+
+                    return;
+                }
+                catch (ArgumentException exception)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Error.WriteLine("\n\r" + exception.Message);
+                    Console.Error.WriteLine("Стек вызовов:\n\r" + exception.StackTrace);
+                    Environment.Exit(0xA0);                                     // TODO: Нужен код ошибки
+
+                    return;
+                }
+            }
+            else if (args.Length == 0)
             {
                 do                          // В случае, если будет ошибка при вводе, то будет
                                             // заново начат запрос данных от пользователя
@@ -60,47 +115,11 @@ namespace LW2_Console
                         Console.Error.Write("\n\r" + exception.Message);
                         Console.ReadKey();
                         Console.ResetColor();
-                        
+
                         Console.WriteLine("\n\r\n\r" + new string('#', 80));
                     }
                 } while (true);
 
-            }
-            else if (args.Length == 4)
-            {
-                // Проверка переданных аргументов программе, через консольную строку
-                try
-                {
-                    function = int.Parse(args[0]);
-                    if (function == 0) Environment.Exit(0x00);
-                    else if (function < 0 || function > 6) throw new ArgumentException("Ошибка при выборе функции.", "function");
-
-                    from = double.Parse(args[1]);
-
-                    to = double.Parse(args[2]);
-                    if (to < from) throw new ArgumentException("Конец диапазона меньше его начала.", "to");
-
-                    step = double.Parse(args[3]);
-                    if (step < 0) throw new ArgumentException("Указан шаг меньше нуля.", "step");
-                }
-                catch (FormatException exception)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Error.WriteLine("\n\rОшибка при преобразовании аргумента в числовое значение.");
-                    Console.Error.WriteLine("Стек вызовов:\n\r" + exception.StackTrace);
-                    Environment.Exit(0xA0);                                     // TODO: Нужен код ошибки
-
-                    return;
-                }
-                catch (ArgumentException exception)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Error.WriteLine("\n\r" + exception.Message);
-                    Console.Error.WriteLine("Стек вызовов:\n\r" + exception.StackTrace);
-                    Environment.Exit(0xA0);                                     // TODO: Нужен код ошибки
-
-                    return;
-                }
             }
             else
             {

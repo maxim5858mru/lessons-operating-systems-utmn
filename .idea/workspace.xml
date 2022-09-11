@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0e026d5d-c1f7-41a0-9f30-dca2ad5555dc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Laboratory work №1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Console/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Console/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Console/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Console/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Console/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/Laboratory work №2 Forms.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/Laboratory work №2 Forms.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lessons Operating Systems UTMN.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Lessons Operating Systems UTMN.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Ecr3N5RtU1ZfX1pxAYnxtYlk6s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/maxim/Documents/Проекты/UTMN/Lessons Operating Systems UTMN",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e026d5d-c1f7-41a0-9f30-dca2ad5555dc" name="Changes" comment="" />
+      <created>1662905513918</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662905513918</updated>
+      <workItem from="1662905515457" duration="473000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
