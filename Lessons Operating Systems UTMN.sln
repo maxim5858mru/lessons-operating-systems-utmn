@@ -16,7 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решен
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratory work №3 Forms", "Laboratory work №3 Forms\Laboratory work №3 Forms.csproj", "{B9210BCA-5D05-4873-A484-D0BED5A60B57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratory work №4", "Laboratory work №4\Laboratory work №4.csproj", "{28FC5F1D-2AFC-4E00-A641-119DDDD96463}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laboratory work №4", "Laboratory work №4\Laboratory work №4.csproj", "{28FC5F1D-2AFC-4E00-A641-119DDDD96463}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratory work №5", "Laboratory work №5\Laboratory work №5.csproj", "{BE2ED319-9428-4288-A909-716DDC81CC7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{28FC5F1D-2AFC-4E00-A641-119DDDD96463}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28FC5F1D-2AFC-4E00-A641-119DDDD96463}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28FC5F1D-2AFC-4E00-A641-119DDDD96463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2ED319-9428-4288-A909-716DDC81CC7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2ED319-9428-4288-A909-716DDC81CC7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2ED319-9428-4288-A909-716DDC81CC7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2ED319-9428-4288-A909-716DDC81CC7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
