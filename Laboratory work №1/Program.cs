@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.IO;
 
 namespace LW1
 {
@@ -11,7 +10,7 @@ namespace LW1
             {
                 if (args.Length <= 0)
                 {
-                    throw new ArgumentException("Для работы программы требуется хотя бы один аргумент.", "args");
+                    throw new ArgumentException("Для работы программы требуется хотя бы один аргумент.", nameof(args));
                 }
                 else if (!CheckFileName(ref args[0]))
                 {
@@ -44,9 +43,14 @@ namespace LW1
             }
         }
 
+        /// <summary>
+        /// Проверка существования файла
+        /// </summary>
+        /// <param name="fileName">Имя файла</param>
+        /// <returns>Существует ли файл</returns>
         private static bool CheckFileName(ref string fileName)
         {
-            bool correctExtension = (fileName.Substring(fileName.Length - 4) == ".vbs");
+            var correctExtension = fileName[^4..] == ".vbs";
             if (correctExtension && File.Exists(fileName))
             {
                 return true;
@@ -62,19 +66,28 @@ namespace LW1
             }
         }
 
+        /// <summary>
+        /// Запуск дочернего процесса
+        /// </summary>
+        /// <param name="fileName">Имя файла</param>
+        /// <param name="arguments">Параметры передаваемые процессу</param>
+        /// <param name="interpreter">Название интерпретатора</param>
         private static void Run(string fileName, string[] arguments, string interpreter = "cscript")
         {
             var process = new Process();
-            string argumentsLine = '"' + fileName + "\" ";
+            var argumentsLine = '"' + fileName + "\" ";
 
+            // Формирование строки аргументов
             foreach (var arg in arguments)
             {
                 argumentsLine += '"' + arg + '"' + " ";
             }
 
+            // Настройка процесса
             process.StartInfo.FileName = interpreter;
             process.StartInfo.Arguments = argumentsLine;
 
+            // Запуск процесса
             Console.WriteLine($"Запуск интерпретатора VBScript. Количество аргументов: {arguments.Length}");
             process.Start();
             Console.ForegroundColor = ConsoleColor.Blue;

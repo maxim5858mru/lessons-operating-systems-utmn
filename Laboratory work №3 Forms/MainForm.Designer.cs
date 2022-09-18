@@ -41,7 +41,7 @@ namespace LW3_Forms
             this.textBoxMax = new System.Windows.Forms.TextBox();
             this.labelStep = new System.Windows.Forms.Label();
             this.textBoxStep = new System.Windows.Forms.TextBox();
-            this.buttonChartBilld = new System.Windows.Forms.Button();
+            this.buttonChartBuild = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,22 +117,22 @@ namespace LW3_Forms
             this.textBoxStep.TabIndex = 3;
             this.textBoxStep.Text = "0,025";
             // 
-            // buttonChartBilld
+            // buttonChartBuild
             // 
-            this.buttonChartBilld.Location = new System.Drawing.Point(703, 125);
-            this.buttonChartBilld.Name = "buttonChartBilld";
-            this.buttonChartBilld.Size = new System.Drawing.Size(119, 23);
-            this.buttonChartBilld.TabIndex = 4;
-            this.buttonChartBilld.Text = "Построить";
-            this.buttonChartBilld.UseVisualStyleBackColor = true;
-            this.buttonChartBilld.Click += new System.EventHandler(this.buttonChartBilld_Click);
+            this.buttonChartBuild.Location = new System.Drawing.Point(703, 125);
+            this.buttonChartBuild.Name = "buttonChartBuild";
+            this.buttonChartBuild.Size = new System.Drawing.Size(119, 23);
+            this.buttonChartBuild.TabIndex = 4;
+            this.buttonChartBuild.Text = "Построить";
+            this.buttonChartBuild.UseVisualStyleBackColor = true;
+            this.buttonChartBuild.Click += new System.EventHandler(this.ButtonChartBuild_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 461);
-            this.Controls.Add(this.buttonChartBilld);
+            this.Controls.Add(this.buttonChartBuild);
             this.Controls.Add(this.labelStep);
             this.Controls.Add(this.textBoxStep);
             this.Controls.Add(this.labelMax);
@@ -157,6 +157,6 @@ namespace LW3_Forms
         public System.Windows.Forms.TextBox textBoxMax;
         private System.Windows.Forms.Label labelStep;
         public System.Windows.Forms.TextBox textBoxStep;
-        private System.Windows.Forms.Button buttonChartBilld;
+        private System.Windows.Forms.Button buttonChartBuild;
     }
 }

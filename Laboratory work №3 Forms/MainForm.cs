@@ -1,15 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-using System.Threading;
-using System.Globalization;
 
 namespace LW3_Forms
 {
@@ -21,6 +14,12 @@ namespace LW3_Forms
             GetChart(-1.2, 1.2, 0.025);
         }
 
+        /// <summary>
+        /// Построение графика
+        /// </summary>
+        /// <param name="from">От</param>
+        /// <param name="to">До</param>
+        /// <param name="step">Шаг</param>
         private void GetChart(double from, double to, double step)
         {
             var dataSin = GetData(from, to, step, 1);
@@ -32,6 +31,15 @@ namespace LW3_Forms
             }
         }
 
+        /// <summary>
+        /// Получение данных для графика от дочернего процесса
+        /// </summary>
+        /// <param name="from">От</param>
+        /// <param name="to">До</param>
+        /// <param name="step">Шаг</param>
+        /// <param name="function">Требуемая функция</param>
+        /// <returns>Словарь с полученными значениями функции</returns>
+        /// <exception cref="Exception">В случае если дочерний процесс неудачно завершил работу, будет вызвано исключение</exception>
         private Dictionary<double, double> GetData(double from, double to, double step, int function)
         {
             var process = new Process();
@@ -70,11 +78,13 @@ namespace LW3_Forms
                 result.Add(Convert.ToDouble(line[1]), Convert.ToDouble(line[2]));
             }
 
-            var temp = process.StandardOutput.ReadToEnd();
             return result;
         }
 
-        private void buttonChartBilld_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Обработчик нажатия на кнопку "Построить"
+        /// </summary>
+        private void ButtonChartBuild_Click(object sender, EventArgs e)
         {
             chart.Series[0].Points.Clear();
             GetChart(double.Parse(textBoxMin.Text), double.Parse(textBoxMax.Text), double.Parse(textBoxStep.Text));

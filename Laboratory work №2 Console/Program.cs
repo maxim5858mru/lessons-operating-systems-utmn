@@ -1,8 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Collections;
-
-namespace LW2_Console
+﻿namespace LW2_Console
 {
     public class Program
     {
@@ -13,7 +9,7 @@ namespace LW2_Console
             double from, to, step;
             int function;
 
-            // Проверка и получение переменных окружения
+            // Проверка наличия требуемых переменных окружения и их получение
             var envVars = Environment.GetEnvironmentVariables();
             if (envVars.Contains("LW_OS_FROM") &&
                 envVars.Contains("LW_OS_TO") &&
@@ -37,15 +33,15 @@ namespace LW2_Console
                 {
                     function = int.Parse(args[0]);
                     if (function == 0) Environment.Exit(0x00);
-                    else if (function < 0 || function > 6) throw new ArgumentException("Ошибка при выборе функции.", "function");
+                    else if (function < 0 || function > 6) throw new ArgumentException("Ошибка при выборе функции.", nameof(function));
 
                     from = double.Parse(args[1]);
-
+                    
                     to = double.Parse(args[2]);
-                    if (to < from) throw new ArgumentException("Конец диапазона меньше его начала.", "to");
+                    if (to < from) throw new ArgumentException("Конец диапазона меньше его начала.", nameof(to));
 
                     step = double.Parse(args[3]);
-                    if (step < 0) throw new ArgumentException("Указан шаг меньше нуля.", "step");
+                    if (step < 0) throw new ArgumentException("Указан шаг меньше нуля.", nameof(step));
                 }
                 catch (FormatException exception)
                 {
@@ -84,23 +80,23 @@ namespace LW2_Console
                         Console.Write("\n\rФункция: ");
                         function = int.Parse(Console.ReadLine());
                         if (function == 0) Environment.Exit(0x00);
-                        else if (function < 0 || function > 6) throw new ArgumentException("Ошибка при выборе функции.", "function");
-
+                        else if (function < 0 || function > 6) throw new ArgumentException("Ошибка при выборе функции.", nameof(function));
+                        
                         Console.Write("От: ");
                         from = double.Parse(Console.ReadLine());
 
                         Console.Write("До: ");
                         to = double.Parse(Console.ReadLine());
-                        if (to < from) throw new ArgumentException("Конец диапазона меньше его начала.", "to");
+                        if (to < from) throw new ArgumentException("Конец диапазона меньше его начала.", nameof(to));
 
                         Console.Write("Шаг: ");
                         step = double.Parse(Console.ReadLine());
-                        if (step < 0) throw new ArgumentException("Указан шаг меньше нуля.", "step");
+                        if (step < 0) throw new ArgumentException("Указан шаг меньше нуля.", nameof(step));
 
                         Console.WriteLine();
                         break;
                     }
-                    catch (FormatException exception)
+                    catch (FormatException)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Error.Write("\n\rОшибка при преобразовании введённой строки в числовое значение.");
@@ -123,10 +119,10 @@ namespace LW2_Console
             }
             else
             {
-                // Вывод ошибки, в случае если переданно неправильное количество аргументов программе
+                // Вывод ошибки, в случае если передано неправильное количество аргументов программе
                 try
                 {
-                    throw new ArgumentException("Программе требуется для работы 4 аргумента.", "args");
+                    throw new ArgumentException("Программе требуется для работы 4 аргумента.", nameof(args));
                 }
                 catch (ArgumentException exception)
                 {
@@ -152,28 +148,15 @@ namespace LW2_Console
         /// <exception cref="ArgumentException"></exception>
         private static void PrintCalculation(double from, double to, double step, int function)
         {
-            Calculate calc;
-
-            switch (function)
+            Calculate calc = function switch
             {
-                case 1:
-                    calc = x => Math.Sin(x);
-                    break;
-                case 2:
-                    calc = x => Math.Cos(x);
-                    break;
-                case 3:
-                    calc = x => x * x;
-                    break;
-                case 4:
-                    calc = x => Math.Exp(x);
-                    break;
-                case 5:
-                    calc = x => Math.Log(x, Math.E);
-                    break;
-                default:
-                    throw new ArgumentException("Неправильный номер функции.");
-            }
+                1 => x => Math.Sin(x),
+                2 => x => Math.Cos(x),
+                3 => x => x * x,
+                4 => x => Math.Exp(x),
+                5 => x => Math.Log(x, Math.E),
+                _ => throw new ArgumentException("Неправильный номер функции."),
+            };
 
             // Заголовок таблицы
             Console.WriteLine(new string('-', 34));

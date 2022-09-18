@@ -7,28 +7,73 @@
     <projectFile>Laboratory work №3 Forms/Laboratory work №3 Forms.csproj</projectFile>
     <projectFile>Laboratory work №4/Laboratory work №4.csproj</projectFile>
     <projectFile>Laboratory work №5/Laboratory work №5.csproj</projectFile>
+    <projectFile>Laboratory work №6/Laboratory work №6.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7882b873-881c-426b-a2ba-3efc7207f7c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Laboratory work №5/App.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratory work №5/Laboratory work №5.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratory work №5/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratory work №5/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratory work №5/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lessons Operating Systems UTMN/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lessons Operating Systems UTMN/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lessons Operating Systems UTMN/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lessons Operating Systems UTMN/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lessons Operating Systems UTMN/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lessons Operating Systems UTMN/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lessons Operating Systems UTMN/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lessons Operating Systems UTMN/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lessons Operating Systems UTMN/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lessons Operating Systems UTMN/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №1/Example.vbs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №1/Example.vbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №1/Laboratory work №1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №1/Laboratory work №1.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №1/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №1/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Console/Laboratory work №2 Console.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Console/Laboratory work №2 Console.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Console/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Console/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Console/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Console/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Console/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Console/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/App.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/Laboratory work №2 Forms.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/Laboratory work №2 Forms.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/MainForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/MainForm.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/Properties/Resources.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/Properties/Resources.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/Properties/Settings.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/Properties/Settings.settings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №2 Forms/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №2 Forms/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/App.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/Laboratory work №3 Forms.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/Laboratory work №3 Forms.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/MainForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/MainForm.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/Properties/Resources.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/Properties/Resources.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/Properties/Settings.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/Properties/Settings.settings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №3 Forms/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №3 Forms/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №4/Laboratory work №4.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №4/Laboratory work №4.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №4/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №4/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №4/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №5/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №5/App.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №5/Laboratory work №5.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №5/Laboratory work №5.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №5/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №5/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №5/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №5/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №5/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №5/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №6/Laboratory work №6.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №6/Laboratory work №6.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №6/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №6/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratory work №6/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratory work №6/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lessons Operating Systems UTMN.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Lessons Operating Systems UTMN.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global.json" beforeDir="false" afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,7 +98,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.Laboratory work №5">
+  <component name="RunManager" selected=".NET Project.Laboratory work №4">
     <configuration name="Laboratory work №2 Forms" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -126,6 +171,24 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="Laboratory work №6" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Laboratory work №6/Laboratory work №6.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <configuration name="Laboratory work №1" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Laboratory work №1/Laboratory work №1.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -171,6 +234,7 @@
       <workItem from="1663180770893" duration="172000" />
       <workItem from="1663216795128" duration="1293000" />
       <workItem from="1663259350313" duration="114000" />
+      <workItem from="1663486950731" duration="189000" />
     </task>
     <servers />
   </component>

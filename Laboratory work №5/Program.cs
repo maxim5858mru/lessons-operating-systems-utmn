@@ -16,7 +16,7 @@ namespace LW5
         /// </summary>
         private const int delay = 40;
 
-        static void Main(string[] args)
+        static void Main()
         {
             firstThread = new Thread(delegate ()
             {                
@@ -50,7 +50,7 @@ namespace LW5
             variableY = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            // Запуск и ожидяние подготовки потоков к работе
+            // Запуск и ожидание подготовки потоков к работе
             firstThread.Start();
             secondThread.Start();
             while (firstThread.ThreadState != ThreadState.Suspended &&

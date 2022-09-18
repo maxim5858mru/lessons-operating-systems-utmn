@@ -1,27 +1,24 @@
-﻿using System.Threading;
-
-namespace LW4
+﻿namespace LW4
 {
     internal class Program
     {
         /// <summary>
         /// Путь к файлу для вывода таблицы.
         /// </summary>
-        private static string file = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads\tread1.dat";
+        private static readonly string file = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads\tread1.dat";
 
-        public static void Main(string[] args)
+        public static void Main()
         {
             var tableParams = new TableParams();
             var firstThread = new Thread(new ParameterizedThreadStart(PrintTable));
             var secondThread = new Thread(delegate (object? thread)
             {
                 var writer = thread as Thread;
-                var file = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads\tread1.dat";
                 var reader = new StreamReader(new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
 
                 try
                 {
-                    // Ожидание пока пользователь окончания пользовательского ввода и очистки файла
+                    // Ожидание окончания пользовательского ввода и очистки файла
                     Thread.Sleep(10);
                     while (writer.ThreadState == ThreadState.WaitSleepJoin) Thread.Sleep(1);
                     
@@ -68,7 +65,7 @@ namespace LW4
 
             try
             {
-                // Поток созданый из метода экземпляра
+                // Поток созданный из метода экземпляра
                 var thirdThread = new Thread(new ThreadStart(tableParams.GetCount));
                 thirdThread.Start();
                 thirdThread.Join();
@@ -94,6 +91,9 @@ namespace LW4
         }
     }
 
+    /// <summary>
+    /// Класс для хранения и передачи потоку параметров таблицы
+    /// </summary>
     class TableParams
     {
         public int Count { get; set; }
