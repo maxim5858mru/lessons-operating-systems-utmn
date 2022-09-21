@@ -54,17 +54,22 @@
                 // Генерация значений
                 for (int y = 0; y < data.Length; y++, i++)
                 {
-                    if (data[i % data.Length] == null) data[i % data.Length] = random.Next();
-                    else i--;
+                    data[y] = random.Next();
                 }
 
                 // Запись значений
                 for (int j = 0; j < data.Length; j++)
                 {
+#if DEBUG
+                    Console.WriteLine($"{Thread.CurrentThread.Name}[{(i / 10 - 1) * 10 + j}]: {data[j]}");
+#endif
                     writer.WriteLine($"{Thread.CurrentThread.Name}[{(i / 10 - 1) * 10 + j}]: {data[j]}");
                     data[j] = null;
                 }
 
+#if DEBUG
+                Console.WriteLine(new string('-', 50));
+#endif
                 writer.WriteLine(new string('-', 50));
                 writer.Flush();
                 mutex.ReleaseMutex();
