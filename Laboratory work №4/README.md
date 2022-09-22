@@ -27,31 +27,31 @@ using System.Threading;
 
 internal class Program
 {
-	public static void Main(string[] args)
-	{
-		var thread = new Thread(new ThreadStart(Work.Do));
-		thread.Start();
-		
-		do
-		{
-			Console.WriteLine("Relaxing...");
-			Thread.Sleep(2000);
-		} while (true);
-	}
+    public static void Main(string[] args)
+    {
+        var thread = new Thread(new ThreadStart(Work.Do));
+        thread.Start();
+        
+        do
+        {
+            Console.WriteLine("Relaxing...");
+            Thread.Sleep(2000);
+        } while (true);
+    }
 }
 
 public class Work
 {
-	Work() { }
+    Work() { }
 
-	public static void Do()
-	{
-		do
-		{
-			Console.WriteLine("Working...");
-			Thread.Sleep(5000);
-		} while (true);
-	}
+    public static void Do()
+    {
+        do
+        {
+            Console.WriteLine("Working...");
+            Thread.Sleep(5000);
+        } while (true);
+    }
 }
 ```
 
@@ -63,31 +63,31 @@ using System.Threading;
 
 internal class Program
 {
-	public static void Main(string[] args)
-	{
-		var thread = new Thread(new ParameterizedThreadStart(Work.Do));
-		thread.Start("Hello World!");
-		
-		do
-		{
-			Console.WriteLine("Relaxing...");
-			Thread.Sleep(2000);
-		} while (true);
-	}
+    public static void Main(string[] args)
+    {
+        var thread = new Thread(new ParameterizedThreadStart(Work.Do));
+        thread.Start("Hello World!");
+        
+        do
+        {
+            Console.WriteLine("Relaxing...");
+            Thread.Sleep(2000);
+        } while (true);
+    }
 }
 
 public class Work
 {
-	Work() { }
+    Work() { }
 
-	public static void Do(object data)
-	{
-		do
-		{
-			Console.WriteLine(data.ToString());
-			Thread.Sleep(5000);
-		} while (true);
-	}
+    public static void Do(object data)
+    {
+        do
+        {
+            Console.WriteLine(data.ToString());
+            Thread.Sleep(5000);
+        } while (true);
+    }
 }
 ```
 
@@ -100,24 +100,24 @@ using System.Threading;
 
 internal class Program
 {
-	public static void Main(string[] args)
-	{
-		var thread = new Thread(delegate() 
-		{
-			do
-			{
-				Console.WriteLine("Working...");
-				Thread.Sleep(5000);
-			} while (true);
-		});
-		thread.Start();
-		
-		do
-		{
-			Console.WriteLine("Relaxing...");
-			Thread.Sleep(2000);
-		} while (true);
-	}
+    public static void Main(string[] args)
+    {
+        var thread = new Thread(delegate() 
+        {
+            do
+            {
+                Console.WriteLine("Working...");
+                Thread.Sleep(5000);
+            } while (true);
+        });
+        thread.Start();
+        
+        do
+        {
+            Console.WriteLine("Relaxing...");
+            Thread.Sleep(2000);
+        } while (true);
+    }
 }
 ```
 
@@ -137,21 +137,21 @@ using System.Threading;
 
 internal class Program
 {
-	public static void Main(string[] args)
-	{
-		var thread = new Thread(new ThreadStart(ThreadMethod));
-		thread.Start();
-		thread.Join();
-	}
-	
-	public static void ThreadMethod()
-	{
-		for (int i = 0; i < 10; i++)
-		{
-			Console.WriteLine("Процедура потока: {0}", i);
-			Thread.Sleep(0);        // Отдаём системе остаток выделенного времени
-		}
-	}
+    public static void Main(string[] args)
+    {
+        var thread = new Thread(new ThreadStart(ThreadMethod));
+        thread.Start();
+        thread.Join();
+    }
+    
+    public static void ThreadMethod()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine("Процедура потока: {0}", i);
+            Thread.Sleep(0);        // Отдаём системе остаток выделенного времени
+        }
+    }
 }
 ```
 
@@ -163,27 +163,27 @@ using System.Threading;
 
 internal class Program
 {
-	public static void Main(string[] args)
-	{
-		var program = new Program();
-		program.RunThread();
-	}
-	
-	public void ThreadMethod()
-	{
-		for (int i = 0; i < 10; i++)
-		{
-			Console.WriteLine("Процедура экземпляра потока: {0}", i);
-			Thread.Sleep(0);        // Отдаём системе остаток выделенного времени
-		}
-	}
-	
-	public void RunThread()
-	{
-		var thread = new Thread(new ThreadStart(ThreadMethod));
-		thread.Start();
-		thread.Join();
-	}
+    public static void Main(string[] args)
+    {
+        var program = new Program();
+        program.RunThread();
+    }
+    
+    public void ThreadMethod()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine("Процедура экземпляра потока: {0}", i);
+            Thread.Sleep(0);        // Отдаём системе остаток выделенного времени
+        }
+    }
+    
+    public void RunThread()
+    {
+        var thread = new Thread(new ThreadStart(ThreadMethod));
+        thread.Start();
+        thread.Join();
+    }
 }
 ```
 
@@ -195,29 +195,29 @@ using System.Threading;
 
 internal class Program
 {
-	public static void Main(string[] args)
-	{
-		var program = new Program();
-		program.RunThread();
-	}
-	
-	public void ThreadMethod()
-	{
-		for (int i = 0; i < 10; i++)
-		{
-			Console.WriteLine("Процедура экземпляра потока: {0}", i);
-			Thread.Sleep(0);        // Отдаём системе остаток выделенного времени
-		}
-	}
-	
-	public void RunThread()
-	{
-		var thread = new Thread(delegate()
-		{
-			ThreadMethod();
-		});
-		thread.Start();
-		thread.Join();
-	}
+    public static void Main(string[] args)
+    {
+        var program = new Program();
+        program.RunThread();
+    }
+    
+    public void ThreadMethod()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine("Процедура экземпляра потока: {0}", i);
+            Thread.Sleep(0);        // Отдаём системе остаток выделенного времени
+        }
+    }
+    
+    public void RunThread()
+    {
+        var thread = new Thread(delegate()
+        {
+            ThreadMethod();
+        });
+        thread.Start();
+        thread.Join();
+    }
 }
 ```

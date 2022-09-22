@@ -29,8 +29,8 @@
 
 ```cpp
 DWORD WaitForSingleObject(
-	[in] HANDLE hHandle,
-	[in] DWORD  dwMilliseconds
+    [in] HANDLE hHandle,
+    [in] DWORD  dwMilliseconds
 );
 ```
 
@@ -106,72 +106,72 @@ DWORD WaitForSingleObject(
 ```csharp
 internal class Program
 {
-	private static int[] data;
-	private static AutoResetEvent evenWriter;
-	private static AutoResetEvent evenReader;
+    private static int[] data;
+    private static AutoResetEvent evenWriter;
+    private static AutoResetEvent evenReader;
 
-	static void Main(string[] args)
-	{
-		var reader = new Thread(ReaderThreadMethod);
-		var writer = new Thread(WriterThreadMethod);
-		data = new int[10];
+    static void Main(string[] args)
+    {
+        var reader = new Thread(ReaderThreadMethod);
+        var writer = new Thread(WriterThreadMethod);
+        data = new int[10];
 
-		// Событие для записи создаётся изначально в свободном состоянии
-		evenWriter = new AutoResetEvent(true);
+        // Событие для записи создаётся изначально в свободном состоянии
+        evenWriter = new AutoResetEvent(true);
 
-		// Событие для записи создаётся изначально в несвободном 
-		evenReader = new AutoResetEvent(false);
+        // Событие для записи создаётся изначально в несвободном 
+        evenReader = new AutoResetEvent(false);
 
-		reader.Start();
-		writer.Start();
+        reader.Start();
+        writer.Start();
 
-		reader.Join();
-		writer.Join();
-	}
+        reader.Join();
+        writer.Join();
+    }
 
-	private static void WriterThreadMethod()
-	{
-		while (true)
-		{
-			// Приостановка потока
-			evenWriter.WaitOne();
+    private static void WriterThreadMethod()
+    {
+        while (true)
+        {
+            // Приостановка потока
+            evenWriter.WaitOne();
 #if DEBUG
-			Console.WriteLine("In WriterThreadMethod");
+            Console.WriteLine("In WriterThreadMethod");
 #endif
 
-			for (int i = 0; i < data.Length; i++)
-			{
-				data[i] = i;
-				Thread.Sleep(100);
-			}
+            for (int i = 0; i < data.Length; i++)
+            {
+                data[i] = i;
+                Thread.Sleep(100);
+            }
 
-			// Освобождение события для второго потока, выполняющего чтение
-			evenReader.Set();
-		}
-	}
+            // Освобождение события для второго потока, выполняющего чтение
+            evenReader.Set();
+        }
+    }
 
-	private static void ReaderThreadMethod()
-	{
-		while (true)
-		{
-			evenReader.WaitOne();
+    private static void ReaderThreadMethod()
+    {
+        while (true)
+        {
+            evenReader.WaitOne();
 #if DEBUG
-			Console.WriteLine("In ReaderThreadMethod");
+            Console.WriteLine("In ReaderThreadMethod");
 #endif
 
-			// Считывание значений и очистка массива
-			string values = "";
-			for (int i = 0; i < data.Length; i++)
-			{
-				values += data[i].ToString();
-				data[i] = 0;
-			}
+            // Считывание значений и очистка массива
+            string values = "";
+            for (int i = 0; i < data.Length; i++)
+            {
+                values += data[i].ToString();
+                data[i] = 0;
+            }
 
-			Console.WriteLine(values);
+            Console.WriteLine(values);
 
-			// Освобождение события для первого потока, выполняющего запись
-			evenWriter.Set();
-		}
-	}
+            // Освобождение события для первого потока, выполняющего запись
+            evenWriter.Set();
+        }
+    }
 }
 ```
